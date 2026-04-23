@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aayush Profile Portfolio</title>
+    <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1e1e1e;
+    font-family: sans-serif;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.main-container{
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: 350px 1fr;
+    gap: 50px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.sidebar{
+    height: 90vh;
+    background-color:#2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
+    padding: 40px;
+    position: sticky;
+    top: 40px;
+}
+
+.main-content{
+    background-color:#2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+
+/* Profile section */
+
+.profile{
+    text-align: center;
+}
+
+
+.profile img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid #3a3a3a;
+}
+
+.profile h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+.profile p{
+    background-color: #1e1e1e;
+    padding: 5px 15px;
+    color: #FFBF00;
+    border: 1px solid #3a3a3a;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+
+/* contact information */
+
+.contact{
+    margin-top: 30px;
+    border-top: 2px solid #3a3a3a;
+    padding-top:20px;
+}
+
+.label{
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+.value{
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.email,.phone{
+    margin-bottom: 15px;
+}
+
+/* social media */
+
+.social{
+    margin-top: 30px;
+    border-top: 2px solid #3a3a3a;
+    padding-top:20px;
+    text-align: center;
+}
+
+.social img{
+    height: 24px;
+    width: 24px;
+    margin-left: 5px;
+    filter: grayscale(1) invert(0.7);
+    transition: filter 0.3s ease;
+}
+
+.social img:hover{
+    filter: grayscale(0) invert(0);
+}
+
+
+/* main content */
+
+/* Navigation ko  */
+
+
+#navigation{
+    border-bottom: 2px solid #3a3a3a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #a0a0a0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.active, nav a:hover{
+    color: #FFBF00;
+}
+
+
+/* about me */
+
+.heading{
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.line{
+    width: 60px;
+    height: 5px;
+    background-color: #FFBF00;
+    margin-bottom: 15px;
+}
+
+.content{
+    text-align: justify;
+    color: #a0a0a0;
+}
+
+#about{
+    margin-bottom: 40px;
+}
+
+
+/* skills section */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(120px,1fr));
+    gap: 30px;
+}
+
+.item{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #3a3a3a;
+    background-color: #1e1e1e;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img{
+    height: 48px;
+    width: 48px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+    margin-bottom: 15px;
+}
+
+.item h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.item:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Education */
+#education{
+    margin-top: 30px;
+}
+
+.edtech{
+    position: relative;
+    margin-top: 20px;
+}
+
+.year{
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+
+.degree{
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.college{
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+
+.work{
+    color: #a0a0a0;
+}
+
+ .edsecond{
+    margin-bottom: 30px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.goal{
+    height: 15px;
+    width: 15px;
+    border: 3px solid #FFBF00;
+    border-radius: 50%;
+    position: absolute;
+    top:5px;
+    left: 0px;
+    z-index: 5;
+}
+
+.liner{
+    position: absolute;
+    width: 2px;
+    top:0px;
+    bottom: 0px;
+    left: 5px;
+    border: 2px solid #3a3a3a;
+}
+
+
+/* Portfolio */
+
+.project-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:25px;
+}
+
+.project{
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);;
+}
+
+.project img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card{
+    padding: 20px;
+}
+
+.card h3{
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card span{
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+
+@media screen and (max-width:1200px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .sidebar{
+        position: static;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+
+    #navigation nav {
+        /* Adjust nav for smaller screens */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sidebar{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <!-- siderbar -->
+        <div class="sidebar">
+
+            <!-- profile -->
+            <div class="profile">
+                <img src="photo2.jpg" alt="" >
+                <h2>Aayush Singh</h2>
+                <p>Frontend Developer</p>
+            </div>
+            
+
+             <!--contact  -->
+
+             <div class="contact">
+                  <div class="email">
+                    <h3 class="label">Email</h3>
+                    <a href="mailto:as6203269@gmail.com" class="value">as6203269@gmail.com</a>
+                  </div>
+                  <div class="phone">
+                    <h3 class="label">Phone</h3>
+                    <a href="tel:8090151662" class="value">8090151662</a>
+                  </div>
+                  <div class="location">
+                    <h3 class="label">Location</h3>
+                    <p class="value">Varanasi, Uttar Pradesh, India</p>
+                  </div>
+             </div>
+
+
+             <!-- social -->
+
+
+             <div class="social">
+                
+                <a href="https://github.com/Aayush8530"><img src="https://th.bing.com/th/id/OIP.ExopCFEedUJCZ1zR_b455QHaHa?w=199&h=199&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt=""></a>
+                <a href="https://www.linkedin.com/in/aayush-singh-2b30b1255"><img src="https://www.svgrepo.com/show/144030/linkedin-square-logo.svg" alt=""></a>
+             </div>
+        </div>
+
+        
+        <!-- main-content -->
+        <div class="main-content">
+          
+            <!-- navigation -->
+             <div id="navigation">
+                <nav>
+                    <a href="#about" class="active">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#portfolio">Portfolio</a>
+                </nav>
+             </div>
+
+            <!-- about me -->
+             <div id="about">
+                <h2 class="heading">About Me</h2>
+                <div class="line"></div>
+                <p class="content">I am a creative and passionate Frontend Developer with a keen eye for detail and a love for building beautiful, functional, and user-friendly web experiences. My journey in web development is driven by a desire to turn complex problems into simple, elegant solutions. I specialize in modern web technologies and am always eager to learn and adapt to the ever-evolving digital landscape.</p>
+             </div>
+
+            <!-- Skills -->
+             <div id="skills">
+                <h2 class="heading">Skills</h2>
+                <div class="line"></div>
+                <div class="grid-container">
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/html5.svg" alt="">
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/css.svg" alt="">
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/javascript.svg" alt="">
+                        <h3>Javascript</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/react.svg" alt="">
+                        <h3>React</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/git.svg" alt="">
+                        <h3>Git & Github</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/typescript.svg" alt="">
+                        <h3>Typescript</h3>
+                    </div>
+                </div>
+             </div>
+
+            <!-- Education -->
+             <div id="education">
+                <h2 class="heading">Education</h2>
+                <div class="line"></div>
+                <div class="edtech">
+
+                    
+                  
+                    <div class="edsecond">
+                        <div class="year">2023-2027</div>
+                        <h3 class="degree">Bachelor of Technology in CSE</h3>
+                        <p class="college">Dr.APJ Abdul Kalam Technical University</p>
+                        <p class="work">Focused on learning Algorithm, DBMS, Computer Network and Operating system. </p>
+                        <div class="goal"></div>
+                    </div>
+
+                    <div class="liner"></div>
+                
+               
+                
+            </div>
+
+            <!-- Portfolio -->
+             <div id="portfolio">
+                <h2 class="heading">Portfolio</h2>
+                <div class="line"></div>
+
+                <div class="project-container">
+                    <div class="project">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.1n9fCtiKqti5pV_So2fKmgHaEo?w=1600&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                        <div class="card">
+                            <h3>E-Commerce Website</h3>
+                            <p>A fully responsive online store built with modern design principles.</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="https://infinitycarehospital.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-19-at-19.33.18-e1596660172558-966x483.jpeg" alt="">
+                        <div class="card">
+                            <h3></h3>
+                            <p>A fully responsive website of infinity care hospital using html and css</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="https://th.bing.com/th/id/OIP.GfazaX5wQdkcvcZAq5KGFAHaFp?w=223&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+                        <div class="card">
+                            <h3>Personal Blog Theme</h3>
+                            <p>A clean, content-focused blog theme designed for readability.</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="https://th.bing.com/th/id/OIF.OYlTWFFEliwiLrcwLcwJ7w?w=310&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="">
+                        <div class="card">
+                            <h3>Starbuck Website clone</h3>
+                            <p>A fully responsive Starbuck online store built with modern design principles</p>
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+        </div> 
+    </div>
+
+</body>
+</html>
